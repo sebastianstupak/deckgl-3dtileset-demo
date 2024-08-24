@@ -25,7 +25,7 @@ const ELEVATION_DECODER: TerrainLayerProps["elevationDecoder"] = {
   offset: -10000 + 44,
 };
 
-const SolarMap = () => {
+const Map = () => {
   const [initialViewState, setInitialViewState] = useState<MapViewState>({
     latitude: 50.843332,
     longitude: 5.825286,
@@ -110,4 +110,4 @@ const SolarMap = () => {
   );
 };
 
-export default SolarMap;
+export default Map;

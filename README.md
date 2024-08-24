@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DeckGL 3D Tileset Demo
 
-## Getting Started
+![DeckGL 3D Tileset showcase](./docs/media/showcase.png)
 
-First, run the development server:
+This demo showcases rendering of 3D Tileset ([3D Tiles](https://www.ogc.org/standard/3dtiles/)) in web using [Next.js](https://nextjs.org/) using [DeckGL](https://deck.gl/) framework.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Mapbox is used to retrieve terrain and surface image in order to create DeckGL terrain layer.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tileset is located in the `/public/tileset` folder.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Findings
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Tileset disappears under certain camera angles. There are cuts between chunks of terrains provided by Mapbox.
 
-## Learn More
+After extensive debugging - moved to Cesium.js for further projects. DeckGL isn't used by community for GIS / CityGML related projects as much.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If some good soul finds this repository and finds the problem behind the tileset disappearing, please let me know why :)
